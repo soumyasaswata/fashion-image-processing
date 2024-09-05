@@ -1,0 +1,14 @@
+{
+    "name": "fashion-image-processing",
+    "version": "1.0.0",
+    "scripts": {
+      "start": "npm run start:server",
+      "start:client": "npm start --prefix client",
+      "start:server": "npm start --prefix server",
+      "build:client": "npm run build --prefix client",
+      "heroku-postbuild": "npm run build:client"
+    },
+    "dependencies": {
+      // Add any dependencies needed for the root
+    }
+  }

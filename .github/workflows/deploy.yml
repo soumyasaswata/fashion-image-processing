@@ -1,0 +1,38 @@
+name: Deploy to AWS Elastic Beanstalk
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build client
+      run: npm run build:client
+
+    - name: Deploy to Elastic Beanstalk
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: 'ap-south-1'
+        APPLICATION_NAME: 'fashion-processing-app'  # Replace with your actual application name
+        ENVIRONMENT_NAME: 'Fashion-processing-app-env'  # Replace with your actual environment name
+      run: |
+        zip -r deploy.zip . -x '*.git*'
+        aws s3 cp deploy.zip s3://$APPLICATION_NAME/deploy.zip
+        aws elasticbeanstalk create-application-version --application-name $APPLICATION_NAME --version-label $GITHUB_SHA --source-bundle S3Bucket=$APPLICATION_NAME,S3Key=deploy.zip
+        aws elasticbeanstalk update-environment --environment-name $ENVIRONMENT_NAME --version-label $GITHUB_SHA
