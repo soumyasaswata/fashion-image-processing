@@ -18,7 +18,7 @@ jobs:
     - name: Install client dependencies
       run: npm install --prefix client
     - name: Build client
-      run: npm run build:client
+      run: npm run build --prefix client
     - name: Deploy to Elastic Beanstalk
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
