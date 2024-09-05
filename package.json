@@ -2,17 +2,45 @@
   "name": "fashion-image-processing",
   "version": "1.0.0",
   "description": "A fashion image processing application",
-  "main": "index.js",
+  "main": "server/server.js",
   "scripts": {
-    "start": "node index.js",
-    "build:client": "webpack --config webpack.config.js"
+    "start": "node server/server.js",
+    "build:client": "npm run build --prefix client",
+    "postinstall": "npm run build:client"
   },
   "dependencies": {
     "express": "^4.17.1",
-    "webpack": "^5.38.1"
+    "mongoose": "^5.12.3"
   },
   "devDependencies": {
-    "webpack-cli": "^4.7.2"
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2",
+    "babel-loader": "^8.2.2",
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.1"
+  },
+  "author": "soumya",
+  "license": "ISC"
+}{
+  "name": "fashion-image-processing",
+  "version": "1.0.0",
+  "description": "A fashion image processing application",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "build:client": "npm run build --prefix client",
+    "postinstall": "npm run build:client"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.3"
+  },
+  "devDependencies": {
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2",
+    "babel-loader": "^8.2.2",
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.1"
   },
   "author": "soumya",
   "license": "ISC"

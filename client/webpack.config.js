@@ -1,7 +1,8 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js', // Adjust the entry point as needed
+  mode: 'production', // Set to 'development' or 'production' as needed
+  entry: './src/index.js', // Adjusted entry point
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
