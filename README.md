@@ -60,6 +60,8 @@ npm start
 ```
 The client will start at http://localhost:3000.
 
+![Sample Output Image screenshots](https://github.com/soumyasaswata/fashion-image-processing/blob/main/screenshots/Screenshot%202024-09-10%20at%2012.38.06%E2%80%AFAM.png)
+
 **Running the Application:**
 Once both the server and client are running:
 - Open your browser and go to http://localhost:3000.
