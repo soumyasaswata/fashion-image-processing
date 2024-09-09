@@ -15,7 +15,6 @@ Make sure you have the following installed on your machine:
 - Node.js (v16 or higher) and npm
 - MongoDB (for image processing storage)
 - Git (for version control)
-- Heroku or any cloud platform for deployment
 
 **Project Setup:**
 The project contains two separate applications for the client and server, each with its own package.json file. Follow the steps below to set up both.
@@ -63,8 +62,7 @@ The client will start at http://localhost:3000.
 
 **Running the Application:**
 Once both the server and client are running:
-1. Open your browser and go to http://localhost:3000.
-2. You can either upload an image file or provide an image URL to generate different fashion views (e.g., Neck Shot, Sleeve Shot).
+- Open your browser and go to http://localhost:3000.
 
 **Future Improvements:**
 
