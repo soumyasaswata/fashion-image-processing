@@ -60,7 +60,20 @@ npm start
 ```
 The client will start at http://localhost:3000.
 
+Output ScreenShots:
+Image 1:
 ![Sample Output Image screenshots](https://github.com/soumyasaswata/fashion-image-processing/blob/main/screenshots/Screenshot%202024-09-10%20at%2012.38.06%E2%80%AFAM.png)
+![Sample Output Image screenshots](https://github.com/soumyasaswata/fashion-image-processing/blob/main/screenshots/Screenshot%202024-09-10%20at%2012.38.22%E2%80%AFAM.png)
+![Sample Output Image screenshots](https://github.com/soumyasaswata/fashion-image-processing/blob/main/screenshots/Screenshot%202024-09-10%20at%2012.38.26%E2%80%AFAM.png)
+
+Image 2:
+![Sample Output Image screenshots](https://github.com/soumyasaswata/fashion-image-processing/blob/main/screenshots/Screenshot%202024-09-10%20at%2012.39.01%E2%80%AFAM.png)
+![Sample Output Image screenshots](https://github.com/soumyasaswata/fashion-image-processing/blob/main/screenshots/Screenshot%202024-09-10%20at%2012.39.09%E2%80%AFAM.png)
+![Sample Output Image screenshots](https://github.com/soumyasaswata/fashion-image-processing/blob/main/screenshots/Screenshot%202024-09-10%20at%2012.39.16%E2%80%AFAM.png)
+
+Server run screenshots:
+![Sample Output Image screenshots](https://github.com/soumyasaswata/fashion-image-processing/blob/main/screenshots/Screenshot%202024-09-10%20at%201.00.53%E2%80%AFAM%20(2).png)
+![Sample Output Image screenshots](https://github.com/soumyasaswata/fashion-image-processing/blob/main/screenshots/Screenshot%202024-09-10%20at%201.01.03%E2%80%AFAM%20(2).png)
 
 **Running the Application:**
 Once both the server and client are running:
