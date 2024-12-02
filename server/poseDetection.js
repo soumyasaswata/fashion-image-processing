@@ -68,6 +68,16 @@ const generateShots = async (imageBuffer) => {
                 .toBuffer();
         };
 
+
+        // Nose view
+        if (noseKeyPoint) {
+            try {
+                const noseShotBuffer = await extractRegion(noseKeyPoint.x, noseKeyPoint.y, 100, 100);
+                shots.push({ viewType: 'nose', data: noseShotBuffer.toString('base64') });
+            } catch (error) {
+                console.error('Error processing nose shot:', error);
+        }
+
         // Neck view
         if (leftShoulderKeyPoint && rightShoulderKeyPoint && noseKeyPoint) {
             const neckX = (leftShoulderKeyPoint.x + rightShoulderKeyPoint.x) / 2;
